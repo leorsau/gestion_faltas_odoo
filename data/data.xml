@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data noupdate="1">
+
+
+        <!-- GRUPO DEMO -->
+        <record id="grupo_demo" model="gestion_faltas.grupo">
+            <field name="codigo">00000000</field>
+            <field name="nombre">grupo demo</field>
+            <field name="etapa">ESO</field>
+        </record>
+
+        <!-- ALUMNO DEMO -->
+        <record id="alumno_demo" model="gestion_faltas.alumno">
+            <field name="name">alumno</field>
+            <field name="apellido1">demo</field>
+            <field name="apellido2">sin-apellido2</field>
+            <field name="nia">00000000</field>
+            <field name="grupo_id" ref="grupo_demo"/>
+        </record>
+
+        <!-- PROFESOR DEMO -->
+        <record id="profesor_demo" model="gestion_faltas.profesor">
+            <field name="name">profesor</field>
+            <field name="apellido1">demo</field>
+            <field name="apellido2">sin-apellido2</field>
+        </record>
+
+        <!-- ASIGNATURA DEMO -->
+        <record id="asignatura_demo" model="gestion_faltas.asignatura">
+            <field name="name">asignatura_demo</field>
+        </record>
+
+        <!-- LUGAR DEMO -->
+        <record id="lugar_demo" model="gestion_faltas.lugar">
+            <field name="name">aula_demo</field>
+        </record>
+
+        <!-- MOTIVO DEMO -->
+        <record id="motivo_demo" model="gestion_faltas.motivo">
+            <field name="code">00000000</field>
+            <field name="name">motivo_demo</field>
+        </record>
+
+
+        <record id="parte_demo" model="gestion_faltas.parte">
+            <field name="grupo_id" ref="grupo_demo"/>
+            <field name="alumno_id" ref="alumno_demo"/>
+            <field name="profesor_id" ref="profesor_demo"/>
+            <field name="asignatura_id" ref="asignatura_demo"/>
+            <field name="lugar" ref="lugar_demo"/>
+            <field name="motivo_id" ref="motivo_demo"/>
+            <field name="descripcion">Parte de ejemplo precargado automáticamente.</field>
+            <field name="fecha_hora">2026-03-19 18:00:00</field>
+        </record>
+
+    </data>
+</odoo>

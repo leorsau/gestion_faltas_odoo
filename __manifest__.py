@@ -7,13 +7,20 @@
     'category': 'Education',
     'description': 'Proyecto sistema de gestion de faltas',
     'data': [  
-        'security/security.xml',
-        'security/ir.model.access.csv',
-        'views/menus.xml',
-        'views/alumno_views.xml',
-        'views/grupo_views.xml',
-        'views/profesor_views.xml',
-        'views/parte_views.xml',
+    'security/security.xml',
+    'security/ir.model.access.csv',
+
+    'views/parte_views.xml',
+    'views/profesor_views.xml',
+    'views/alumno_views.xml',
+    'views/grupo_views.xml',
+    'views/graficas_views.xml',
+    'views/menus.xml',
+
+    'data/data.xml',
+
+    'report/report_alumno.xml',
+    'report/report_grupo.xml',
                 ],
                 
     'installable': True,

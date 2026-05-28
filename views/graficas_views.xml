@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_parte_graficas_trimestre" model="ir.actions.act_window">
+        <field name="name">gestion_faltas.graficas_trimestre</field>
+        <field name="res_model">gestion_faltas.parte</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_parte_graph_trimestres"/>
+    </record>
+
+    <record id="view_parte_graph_trimestres" model="ir.ui.view">
+        <field name="name">gestion_faltas.parte.graph.trimestres</field>
+        <field name="model">gestion_faltas.parte</field>
+        <field name="arch" type="xml">
+            <graph string="Partes por Trimestres">
+                <field name="fecha_hora" interval="month"/>
+            </graph>
+        </field>
+    </record>
+
+
+    <!---->
+
+    <record id="action_parte_graficas_grupos" model="ir.actions.act_window">
+        <field name="name">gestion_faltas.graficas_grupo</field>
+        <field name="res_model">gestion_faltas.parte</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_parte_graph_grupos"/>
+    </record>
+
+    <record id="view_parte_graph_grupos" model="ir.ui.view">
+        <field name="name">gestion_faltas.parte.graph.grupos</field>
+        <field name="model">gestion_faltas.parte</field>
+        <field name="arch" type="xml">
+            <graph string="Partes por Grupo">
+                <field name="grupo_id"/>
+            </graph>
+        </field>
+    </record>
+
+    <!---->
+
+    <record id="action_parte_graficas_etapa" model="ir.actions.act_window">
+        <field name="name">gestion_faltas.graficas_etapa</field>
+        <field name="res_model">gestion_faltas.parte</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_parte_graph_etapa"/>
+    </record>
+
+    <record id="view_parte_graph_etapa" model="ir.ui.view">
+        <field name="name">gestion_faltas.parte.graph.etapa</field>
+        <field name="model">gestion_faltas.parte</field>
+        <field name="arch" type="xml">
+            <graph string="Partes por Etapa">
+                <field name="etapa"/>
+            </graph>
+        </field>
+    </record>
+
+
+    <!---->
+
+    <record id="action_parte_graficas_alumno" model="ir.actions.act_window">
+        <field name="name">gestion_faltas.graficas_alumnos</field>
+        <field name="res_model">gestion_faltas.parte</field>
+        <field name="view_mode">graph</field>
+        <field name="view_id" ref="view_parte_graph_alumnos"/>
+    </record>
+
+    <record id="view_parte_graph_alumnos" model="ir.ui.view">
+        <field name="name">gestion_faltas.parte.graph.alumnos</field>
+        <field name="model">gestion_faltas.parte</field>
+        <field name="arch" type="xml">
+            <graph string="Partes por Alumno">
+                <field name="alumno_id"/>
+            </graph>
+        </field>
+    </record>
+
+
+</odoo>

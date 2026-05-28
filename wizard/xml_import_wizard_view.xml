@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_xml_import_wizard_form" model="ir.ui.view">
+        <field name="name">xml.import.wizard.form</field>
+        <field name="model">xml.import.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Importar Datos XML">
+                <group>
+                    <field name="file_name" invisible="1"/>
+                    <field name="xml_file" filename="file_name"/>
+                </group>
+                <footer>
+                    <button name="action_import_xml"
+                            string="Importar"
+                            type="object"
+                            class="btn-primary"/>
+                    <button string="Cancelar"
+                            class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_xml_import_wizard" model="ir.actions.act_window">
+        <field name="name">Importar XML</field>
+        <field name="res_model">xml.import.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+</odoo>

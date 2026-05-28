@@ -10,6 +10,8 @@
     'security/security.xml',
     'security/ir.model.access.csv',
 
+    'wizard/xml_import_wizard_view.xml',
+
     'views/parte_views.xml',
     'views/profesor_views.xml',
     'views/alumno_views.xml',

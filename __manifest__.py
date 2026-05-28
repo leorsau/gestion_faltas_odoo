@@ -7,6 +7,8 @@
     'category': 'Education',
     'description': 'Proyecto sistema de gestion de faltas',
     'data': [  
+        'security/security.xml',
+        'security/ir.model.access.csv',
         'views/menus.xml',
         'views/alumno_views.xml',
         'views/grupo_views.xml',

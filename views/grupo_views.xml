@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="view_grupo_tree" model="ir.ui.view">
+        <field name="name">gestion_faltas.grupo.tree</field>
+        <field name="model">gestion_faltas.grupo</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="codigo"/>
+                <field name="nombre"/>
+                <field name="etapa"/>
+            </tree>
+        </field>
+    </record>
+
+
+    <record id="view_grupo_form" model="ir.ui.view">
+        <field name="name">gestion_faltas.grupo.form</field>
+        <field name="model">gestion_faltas.grupo</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name" readonly="1"/>
+                        <field name="codigo"/>
+                        <field name="nombre"/>
+                        <field name="etapa"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

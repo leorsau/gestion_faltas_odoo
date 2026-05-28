@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_profesor_tree" model="ir.ui.view">
+        <field name="name">gestion_faltas.profesor.tree</field>
+        <field name="model">gestion_faltas.profesor</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nombre_completo"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_profesor_form" model="ir.ui.view">
+        <field name="name">gestion_faltas.profesor.form</field>
+        <field name="model">gestion_faltas.profesor</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="apellido1"/>
+                        <field name="apellido2"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

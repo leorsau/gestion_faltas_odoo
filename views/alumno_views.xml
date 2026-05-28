@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_alumno_tree" model="ir.ui.view">
+        <field name="name">gestion_faltas.alumno.tree</field>
+        <field name="model">gestion_faltas.alumno</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="nia"/>
+                <field name="nombre_completo"/>
+                <field name="grupo_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_alumno_form" model="ir.ui.view">
+        <field name="name">gestion_faltas.alumno.form</field>
+        <field name="model">gestion_faltas.alumno</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="apellido1"/>
+                        <field name="apellido2"/>
+                        <field name="nia"/>
+                        <field name="grupo_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <menuitem id="menu_principal" name="Gestión de Partes"/>
+
+
+    <menuitem id="menu_horizontal_p"    name="Partes"      parent="menu_principal"/>
+    <menuitem id="menu_horizontal_al"   name="Alumno"      parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+    <menuitem id="menu_horizontal_prof" name="Profesor"    parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+    <menuitem id="menu_horizontal_asig" name="Asignatura"  parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+    <menuitem id="menu_horizontal_grup" name="Grupo"       parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+    <menuitem id="menu_horizontal_lug"  name="Lugar"       parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+    <menuitem id="menu_horizontal_mt"   name="Motivo"      parent="menu_principal" groups="gestion_faltas.group_partes_direccion"/>
+        <!-- Menú wizard que meto en el menu junto con los demás  -->
+    <menuitem id="menu_xml_import"
+              name="Importar Datos XML"
+              parent="menu_principal"
+              action="action_xml_import_wizard"/>
+        <!--Menú graficas para dirección-->
+    <menuitem id="menu_graficas_direccion"
+                name="Gráficas"
+                parent="menu_principal"
+                groups="gestion_faltas.group_partes_direccion"/>
+
+
+
+    <record id="action_parte" model="ir.actions.act_window">
+        <field name="name">Partes</field>
+        <field name="res_model">gestion_faltas.parte</field>
+        <field name="view_mode">tree,form,search,kanban,calendar,pivot</field>
+    </record>
+
+    <record id="action_alumno" model="ir.actions.act_window">
+        <field name="name">Alumnos</field>
+        <field name="res_model">gestion_faltas.alumno</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_profesor" model="ir.actions.act_window">
+        <field name="name">Profesores</field>
+        <field name="res_model">gestion_faltas.profesor</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_asignatura" model="ir.actions.act_window">
+        <field name="name">Asignaturas</field>
+        <field name="res_model">gestion_faltas.asignatura</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_grupo" model="ir.actions.act_window">
+        <field name="name">Grupos</field>
+        <field name="res_model">gestion_faltas.grupo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_lugar" model="ir.actions.act_window">
+        <field name="name">Lugares</field>
+        <field name="res_model">gestion_faltas.lugar</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record id="action_motivo" model="ir.actions.act_window">
+        <field name="name">Motivos</field>
+        <field name="res_model">gestion_faltas.motivo</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+    <menuitem id="menu_vertical_parte"
+              name="Partes"
+              parent="menu_horizontal_p"
+              action="action_parte"/>
+
+    <menuitem id="menu_vertical_alumno"
+              name="Alumnos"
+              parent="menu_horizontal_al"
+              action="action_alumno"/>
+
+    <menuitem id="menu_vertical_profesor"
+              name="Profesores"
+              parent="menu_horizontal_prof"
+              action="action_profesor"/>
+
+    <menuitem id="menu_vertical_asignatura"
+              name="Asignaturas"
+              parent="menu_horizontal_asig"
+              action="action_asignatura"/>
+
+    <menuitem id="menu_vertical_grupo"
+              name="Grupos"
+              parent="menu_horizontal_grup"
+              action="action_grupo"/>
+
+    <menuitem id="menu_vertical_lugar"
+              name="Lugares"
+              parent="menu_horizontal_lug"
+              action="action_lugar"/>
+
+    <menuitem id="menu_vertical_motivo"
+              name="Motivos"
+              parent="menu_horizontal_mt"
+              action="action_motivo"/>
+
+              <!--Menus verticales gráficas-->
+
+    <menuitem id="menu_vertical_grafica_trimestre"
+              name="Gráfica por trimestre"
+              parent="menu_graficas_direccion"
+              action="action_parte_graficas_trimestre"/>
+
+    <menuitem id="menu_vertical_grafica_grupo"
+              name="Gráfica por grupo"
+              parent="menu_graficas_direccion"
+              action="action_parte_graficas_grupos"/>
+
+    <menuitem id="menu_vertical_grafica_etapa"
+              name="Gráfica por etapa"
+              parent="menu_graficas_direccion"
+              action="action_parte_graficas_etapa"/>
+
+    <menuitem id="menu_vertical_grafica_alumno"
+              name="Gráfrica por alumno"
+              parent="menu_graficas_direccion"
+              action="action_parte_graficas_alumno"/>
+</odoo>
